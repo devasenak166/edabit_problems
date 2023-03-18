@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=h1, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hexadecimal to binary</h1>
+    <script>
+      function toBinary(num) {
+        return num.toString(2);
+      }
+      console.log(toBinary(0xff));
+      //FA=>F*16^2+A*16^0=250=>decimal
+      //256 128 64 32 16 8 4 2 1
+      //     1  1  1   1  1 0 1 0=>binary
+    </script>
+  </body>
+</html>

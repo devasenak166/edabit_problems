@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>What's Hiding Amongst the Crowd?</h1>
+    <script>
+      function detectWord(str) {
+        let c = str.split("");
+        let result = "";
+        for (let i = 0; i < c.length; i++) {
+          if (c[i] == c[i].toUpperCase()) {
+            continue;
+          } else {
+            result += c[i];
+          }
+        }
+        return '"' + result + '"';
+      }
+      console.log(detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment"));
+    </script>
+  </body>
+</html>

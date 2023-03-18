@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Can Nest array1 in array2 under certain conditions.</h1>
+    <script>
+      function canNest(arr1, arr2) {
+        let sorted = arr1.sort();
+        let sorted1 = arr2.sort();
+        console.log(sorted[0]);
+        console.log(sorted[sorted.length - 1]);
+        console.log(sorted1[0]);
+        console.log(sorted1[sorted1.length - 1]);
+        if (
+          sorted[0] > sorted1[0] &&
+          sorted[sorted.length - 1] < sorted1[sorted1.length - 1]
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(canNest([1, 2, 3, 4], [2, 3]));
+    </script>
+  </body>
+</html>

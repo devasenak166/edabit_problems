@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Given a number, return an array containing the two halves of the number.
+      If the number is odd, make the rightmost number higher. Examples
+      numberSplit(4) ➞ [2, 2] numberSplit(10) ➞ [5, 5] numberSplit(11) ➞ [5, 6]
+      numberSplit(-9) ➞ [-5, -4]
+    </h1>
+    <script>
+      function numberSplit(n) {
+        let number1 = Math.floor(n / 2);
+        let number2 = Math.ceil(n - number1);
+        return [number1, number2];
+      }
+      console.log(numberSplit(10));
+    </script>
+  </body>
+</html>

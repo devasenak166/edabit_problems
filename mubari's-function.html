@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      /0 * 1 = 0 Test.assertEquals(mubashirFunction(0,1), 0) //Obviously, 1 * 2
+      = 2 Test.assertEquals(mubashirFunction(1,2), 2) //That was easy, 5 * 6 =
+      30 Test.assertEquals(mubashirFunction(5,6), 30) //Wait.. What? 10 * 10 = 1
+      ? Test.assertEquals(mubashirFunction(10,10), 1) //What's happening ? 200 *
+      200 = 4, 0 was omitted ? Test.assertEquals(mubashirFunction(200,200), 4)
+      //One more... Test.assertEquals(mubashirFunction(12,34), 21) //You can
+      guess from this.. Test.assertEquals(mubashirFunction(123,45),54)
+    </h1>
+    <script>
+      function mubashirFunction(a, b) {
+        let a1 = a.toString();
+        let b1 = b.toString();
+        if (a1.length == 1 && b1.length == 1) {
+          return a * b;
+        } else if (
+          a1.length >= 1 &&
+          b1.length >= 1 &&
+          a1.includes("0") &&
+          b1.includes("0")
+        ) {
+          let product = a * b;
+          let str = product.toString().split("0");
+
+          for (let i = 0; i < str.length; i++) {
+            if (str[i] != "") {
+              return str[i];
+            }
+          }
+        } else if (a1.length >= 2 && b1.length >= 2) {
+          let minimum = Math.min(a, b);
+          let sep = minimum.toString().split("").reverse().join("");
+          return Number(sep);
+        }
+      }
+      console.log(mubashirFunction(0, 1));
+      console.log(mubashirFunction(1, 2));
+      console.log(mubashirFunction(5, 6));
+      console.log(mubashirFunction(10, 10));
+      console.log(mubashirFunction(200, 200));
+      console.log(mubashirFunction(12, 34));
+      console.log(mubashirFunction(123, 45));
+    </script>
+  </body>
+</html>

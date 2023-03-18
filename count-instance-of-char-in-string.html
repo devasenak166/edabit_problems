@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Count the instance of character in a string.</h1>
+    <script>
+      function charCount(myChar, str) {
+        let str1 = str.split("");
+        let count = 0;
+        for (let i = 0; i < str1.length; i++) {
+          if (str1[i] == myChar) {
+            count += 1;
+          }
+        }
+        return count;
+      }
+      console.log(charCount("b", "big fat bubble"));
+    </script>
+  </body>
+</html>

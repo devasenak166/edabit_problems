@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Create a function that takes a number as an argument and returns the
+      appropriate error message. You should do this without using the switch or
+      if statements. The input error will be 1 to 5: 1 >> "Check the fan: e1" 2
+      >> "Emergency stop: e2" 3 >> "Pump Error: e3" 4 >> "c: e4" 5 >>
+      "Temperature Sensor Error: e5"
+    </h1>
+    <script>
+      function error(n) {
+        const obj = {
+          1: "Check the fan: e1",
+          2: "Emergency stop: e2",
+          3: "Pump Error: e3c: e4",
+          4: "c: e4",
+          5: "Temperature Sensor Error: e5",
+        };
+        for (let i = 0; i < Object.keys(obj).length; i++) {
+          // console.log(Object.keys(obj)[i]);
+          // console.log(Object.values(obj)[i])
+          if (n === Object.keys(obj)[i]) {
+            return '"' + Object.values(obj)[i] + '"';
+          }
+        }
+
+        return "101";
+      }
+      console.log(error("5"));
+    </script>
+  </body>
+</html>
